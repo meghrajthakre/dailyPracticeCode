@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="location-inp">
+            <input type="text" placeholder="Enter City Name" class="inp">
+            <i class="search ri-search-eye-line"></i>
+        </div>
+        <div class="show-weather">
+            <img src="./images/sun-sun.png" alt="">
+            <h1 class="city-name">Hydrabad</h1>
+            <h1 class="temp">35°</h1>
+        </div>
+        <div class="show-options">
+            <div class="time">
+                <h5>Time</h5>
+                <h4><span>11:25:AM</span></h4>
+            </div>
+            <div class="uv">
+                <h5>UV</h5>
+                <h4> 7</h4>
+            </div>
+            <div class="rain">
+                <h5>Rain</h5>
+                <h4>50%</h4>
+
+            </div>
+            <div class="humidity">
+                <h5>Humidity</h5>
+                <h4 class="humidity">22</h4>
+            </div>
+        </div>
+        <div class="timings">
+            <div class="header-time">
+                Sunset & Sunrise
+            </div>
+            <div class="mid-timings">
+                <div class="sunrise">
+                    <h2>Sunrise</h2>
+                    <h4>6.25AM</h4>
+                    <i class="ri-sun-fill"></i>
+                </div>
+                <div class="sunset">
+                    <h2>Sunset</h2>
+                    <h4>6.25PM</h4>
+                    <i class="ri-sun-cloudy-line"></i>
+
+                </div>
+            </div>
+
+            <div class="lenght-day">
+                <h5>Length Of the Day : <span> 13 hours 10 minutes</span></h5>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="./index.js"></script>
+</body>
+
+</html>

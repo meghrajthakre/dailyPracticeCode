@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root {
+    --primary-color: #505050;
+    --background-2-color: #f0f0f0e7;
+    --text-color: #bdc4d0;
+
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Ubuntu", sans-serif;
+}
+
+img {
+    width: 35%;
+
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+}
+
+.location-inp {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.location-inp input {
+    padding: 10px 15px;
+    width: 90%;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    margin: auto;
+    margin-top: 15px;
+    background: var(--background-2-color);
+    border-radius: 10px;
+    position: relative;
+
+}
+
+.location-inp .search {
+    font-size: 22px;
+    position: absolute;
+    right: 10%;
+    font-size: 25px;
+    top: 5%;
+    cursor: pointer;
+}
+
+/* show-weather */
+
+.show-weather {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 20;
+}
+
+.show-weather img {
+    width: 30%;
+
+
+}
+
+.show-weather h1 {
+    font-size: 40px;
+    margin-top: 8px;
+    font-weight: normal;
+}
+
+.show-weather h1:last-child {
+    font-weight: 600;
+    font-size: 42px;
+}
+
+.show-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 30px;
+    background-color: var(--background-2-color);
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 10px;
+}
+
+.show-options h5 {
+    font-size: 18px;
+    text-align: center;
+    font-weight: normal;
+    margin: 5px;
+    color: var(--primary-color);
+}
+
+.show-options h4 {
+    font-size: 18px;
+    text-align: center;
+    font-weight: normal;
+    margin: 5px;
+}
+
+.timings {
+    background-color: red;
+    width: 100%;
+    margin-top: 20px;
+    background: var(--background-2-color);
+    padding: 10px;
+    height: 30%;
+    border-radius: 10px;
+}
+
+.timings .header-time {
+    font-size: 20px;
+    padding: 10px;
+    color: var(--primary-color);
+}
+
+.timings .mid-timings {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 10px;
+    gap: 50px;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.timings .mid-timings h2 {
+    color: black;
+    gap: 20px;
+}
+
+.lenght-day {
+    color: var(--primary-color);
+    font-size: 18px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.lenght-day h5 {
+    margin-left: 10%;
+}
