@@ -11,10 +11,6 @@ function fetchData() {
   });
 
   async function fetchingApi(name) {
-    let city = document.querySelector(".show-weather .city-name");
-
-    let sum = "";
-
     let response = await fetch(
       `https://api.weatherapi.com/v1/forecast.json?key=7cbaaeb6b69f4cb0bfc73034251905&q=${name}&days=1&aqi=no&alerts=no`
     );
@@ -51,3 +47,27 @@ function fetchData() {
 }
 
 fetchData();
+
+//  --primary-color: #505050;
+// --background-2-color: #f0f0f0e7;
+// --text-color: #bdc4d0;
+
+function dark() {
+  let dark = document.querySelector(".dark");
+  let rootElement = document.documentElement;
+  let flag = 0;
+  dark.addEventListener("click", () => {
+    if (flag == 0) {
+      rootElement.style.setProperty("--primary-color", "white");
+      rootElement.style.setProperty("--background-2-color", "black");
+      rootElement.style.setProperty("--text-color", "grey");
+      flag = 1;
+    } else {
+      rootElement.style.setProperty("--primary-color", "#505050");
+      rootElement.style.setProperty("--background-2-color", "#f0f0f0e7");
+      rootElement.style.setProperty("--text-color", "#02060c");
+      flag = 0;
+    }
+  });
+}
+dark();
