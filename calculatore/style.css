@@ -1,0 +1,37 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.calulater {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.row button {
+    padding: 20px;
+    border-radius: 10px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 22px;
+    border: none;
+    margin-top: 10px;
+}
+
+button:active {
+    scale: 0.95;
+}
+
+.input {
+
+    padding: 10px;
+    outline: none;
+    font-size: 22px;
+    border-radius: 10px;
+}

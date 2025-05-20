@@ -23,10 +23,9 @@ function fetchData() {
 
     // Update Time
     const localTime = data.location.localtime.split(" ")[1];
+    console.log(localTime);
 
-    document.querySelector(".time h4 span").textContent = `${localTime} :${
-      localTime <= 12 ? "AM" : "PM"
-    }  `;
+    document.querySelector(".time h4 ").textContent = localTime;
 
     // Update UV Index
     document.querySelector(".uv h4").textContent = data.current.uv;
