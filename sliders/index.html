@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider Images</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <main>
+        <div class="img">
+            <img src="https://picsum.photos/id/237/800/500" alt="">
+            <img src="https://picsum.photos/id/238/800/500" alt="">
+            <img src="https://picsum.photos/id/239/800/500" alt="">
+        </div>
+        <div class="btn">
+            <button onclick="handleBtnPrev()" type="button" class="btn-prev btn-primary btn-lg"> prev</button>
+            <button onclick="handleBtnNext()" type="button" class="btn-next btn-primary btn-lg"> NEXT</button>
+        </div>
+    </main>
+
+
+    <script>
+        const images = document.querySelectorAll('.img img');
+        let counter = 0;
+
+        /* line them up side-by-side */
+        images.forEach((img, i) => {
+            img.style.left = `${i * 100}%`;
+        });
+
+        /* move to next/prev, wrapping around */
+        function handleBtnNext() {
+            counter = (counter + 1) % images.length;
+            slideImage();
+        }
+
+        function handleBtnPrev() {
+            counter = (counter - 1 + images.length) % images.length;
+            slideImage();
+        }
+
+        /* update transform for every slide */
+        function slideImage() {
+            images.forEach(img => {
+                img.style.transform = `translateX(-${counter * 100}%)`;
+            });
+        }
+    </script>
+</body>
+
+</html>
