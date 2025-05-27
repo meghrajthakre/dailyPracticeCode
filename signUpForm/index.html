@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Modern Sign Up Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <div class="form-container">
+        <h2>Sign Up</h2>
+        <form autocomplete="off" onsubmit="handleSubmit()">
+            <div class="form-group">
+                <label for="firstName" class="form-label">First Name</label>
+                <input type="text" id="firstName" name="firstName" required onkeyup="validateFirstName()"
+                    class="form-input">
+                <span class="error-message-firstname error-message" id="firstNameError">Please enter your first
+                    name</span>
+            </div>
+
+            <div class="form-group">
+                <label for="lastName" class="form-label">Last Name</label>
+                <input type="text" id="lastName" required onkeyup="validateLastName()" name="lastName"
+                    class="form-input">
+                <span class="error-message last-name-error">Please enter your last name</span>
+
+            </div>
+
+            <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="email" required onkeyup="validEmail()" name="email" class="form-input">
+                <span class="error-message-email">Please enter a valid email</span>
+            </div>
+
+            <div class="form-group">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="tel" required onkeyup="validPhoneNum()" id="phone" name="phone" class="form-input">
+                <span class="error-message-phone">Please enter a valid phone number</span>
+            </div>
+
+            <div class="form-group">
+                <label for="address" class="form-label">Address</label>
+                <textarea id="address" name="address" class="form-input" rows="3"></textarea>
+                <span class="error-message">Please enter your address</span>
+            </div>
+
+            <button type="submit" class="submit-btn">Sign Up</button>
+            <span class="error-submit"></span>
+
+        </form>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
