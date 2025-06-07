@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Transaction Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>💰 Expense Tracker</h1>
+      <button class="btn">+ Add Transaction</button>
+    </header>
+
+    <section class="summary">
+      
+      <div class="card">
+        <h3>Balance</h3>
+        <p class="balance">₹0.00</p>
+      </div>
+      <div class="card">
+        <h3>Income</h3>
+        <p class="income">₹0.00</p>
+      </div>
+      <div class="card">
+        <h3>Expense</h3>
+        <p class="expense">₹0.00</p>
+      </div>
+    </section>
+
+    <section class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Amount</th>
+            <th>Type</th>
+            <th>Date</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal-overlay">
+    <form class="modal">
+      <h2>Add Transaction</h2>
+      <input type="text" id="Title" placeholder="Title" required />
+      <input type="number" id="Amount" placeholder="Amount" required />
+      <select id="modal-options">
+        <option value="">Choose Type</option>
+        <option value="credit">Credit</option>
+        <option value="debit">Debit</option>
+      </select>
+      <div class="modal-actions">
+        <button class="submit-btn" type="submit">Add</button>
+        <button class="update-btn" type="button">Update</button>
+        <button type="button" class="close-btn">Cancel</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="./index.js"></script>
+</body>
+</html>
